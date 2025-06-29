@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
           setIsAuthenticated(true);
           setUser(decodedUser);
         } else {
-          localStorage.removeItem("token"); // Token expired
+          localStorage.removeItem("token");
         }
       } catch (error) {
         console.error("Failed to decode token or token is invalid:", error);

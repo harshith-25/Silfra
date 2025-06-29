@@ -12,7 +12,7 @@ import messageRoutes from "./routes/messages.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 7000; // Use PORT 7000
+const PORT = process.env.PORT || 7000;
 
 // Middleware
 app.use(cors());
@@ -32,7 +32,7 @@ app.use("/api/messages", messageRoutes);
 // Database initialization and server start
 (async () => {
   try {
-    await initializeDb(); // Initialize database and create tables
+    await initializeDb();
     app.listen(PORT, () => {
       console.log(`Server running on http://localhost:${PORT}`);
     });

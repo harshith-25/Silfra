@@ -20,7 +20,7 @@ export async function initializeDb() {
           id SERIAL PRIMARY KEY,
           title VARCHAR(255) NOT NULL,
           content TEXT NOT NULL,
-          author VARCHAR(100) DEFAULT 'Anonymous', -- <--- THIS LINE IS CRUCIAL
+          author VARCHAR(100) DEFAULT 'Anonymous',
           created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
       );

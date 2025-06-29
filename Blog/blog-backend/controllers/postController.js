@@ -40,7 +40,7 @@ export const createPost = async (req, res) => {
 
   try {
     const result = await pool.query(
-      "INSERT INTO posts (title, content, author) VALUES ($1, $2, $3) RETURNING id, title, content, author, created_at, updated_at",
+      "INSERT INTO posts (title, content, author) VALUES ($1, $2, $3) RETURNING *",
       [title, content, postAuthor]
     );
     res.status(201).json(result.rows[0]);

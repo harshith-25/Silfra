@@ -171,16 +171,15 @@ function App() {
                       type="text"
                       value={editingTodoDescription}
                       onChange={handleEditInputChange}
-                      onKeyPress={(e) => handleEditInputKeyPress(e, todo.id)}
+                      onKeyDown={(e) => handleEditInputKeyPress(e, todo.id)}
                       className="edit-todo-input"
-                      autoFocus // Focus the input when it appears
-                      onBlur={() => handleSaveEdit(todo.id)} // Save on blur (optional)
+                      autoFocus
+                      onBlur={() => handleSaveEdit(todo.id)}
                       aria-label={`Edit description for "${todo.description}"`}
                     />
                   ) : (
                     <span
                       className="todo-description"
-                    // No direct click to toggle on span anymore, checkbox handles it
                     >
                       {todo.description}
                     </span>

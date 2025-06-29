@@ -38,7 +38,7 @@ export const createPost = async (postData) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(postData), // postData includes title, content, author
+      body: JSON.stringify(postData),
     });
     if (!response.ok) {
       const errorData = await response.json();
